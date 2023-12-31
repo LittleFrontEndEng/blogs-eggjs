@@ -54,7 +54,9 @@ module.exports = appInfo => {
     expiresIn: '4h',
   };
 
-  config.OPENAI_KEYS = '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';
+  config.openAI = {
+    apiKey: process.env.OPENAI_API_KEY,
+  };
 
   return {
     ...config,
