@@ -14,6 +14,7 @@ class OpenAIService extends Service {
         yield chunk.choices[0]?.delta;
       }
     } catch (error) {
+      this.ctx.logger.debug('Error calling OpenAI API:', error);
       console.error('Error calling OpenAI API:', error);
       throw error;
     }
